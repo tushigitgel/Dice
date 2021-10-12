@@ -1,11 +1,11 @@
 void setup()
 {
   size(800,800);
-  background(170,170,170);
   noLoop();
 }
 void draw()
 {
+  background(170,170,170);
   int sum = 0;
   for (int y= 0; y < 650; y = y +75){
     for(int x = 0; x < 650; x = x + 75){
