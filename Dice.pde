@@ -9,18 +9,18 @@ void draw()
   int sum = 0;
   for (int y= 0; y < 650; y = y +75){
     for(int x = 0; x < 650; x = x + 75){
-        Die bob = new Die(x,y);
-        bob.show();
-        if(bob.cir < 7){
-          sum+= bob.cir;
-        }
+       Die bob = new Die(x,y);
+       bob.show();
+       if(bob.cir < 7){
+         sum+= bob.cir;
+       }
     }
   }
   text("Total = " + sum, 350, 40);
 }
 void mousePressed()
 {
-redraw();
+  redraw();
 }
 class Die //models one single dice cube
 {
@@ -38,7 +38,7 @@ void roll()
 }
 void show()
 {
-  fill(240,235,200);
+  fill((int)(Math.random()*100+30),(int)(Math.random()*190+30),(int)(Math.random()*190+30));
   rect(myX + 70, myY + 70, 60, 60);
   if(cir == 1){
     fill(0);
